@@ -4,6 +4,7 @@ import jakarta.annotation.PostConstruct;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import ru.gb.timer.TimerCustomAnnotation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,11 +32,13 @@ public class BookController {
     }
 
     @GetMapping()
+    @TimerCustomAnnotation
     public List<Book> getAll() {
         return books;
     }
 
     @GetMapping("random")
+    @TimerCustomAnnotation
     public Book getById() {
         Random random = new Random();
 

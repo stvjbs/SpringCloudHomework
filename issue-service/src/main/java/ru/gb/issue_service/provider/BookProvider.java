@@ -1,9 +1,9 @@
 package ru.gb.issue_service.provider;
 
+import ru.gb.issue_service.dto.Book;
 import org.springframework.cloud.client.loadbalancer.reactive.ReactorLoadBalancerExchangeFilterFunction;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
-import ru.gb.issue_service.dto.Book;
 
 @Component
 public class BookProvider {

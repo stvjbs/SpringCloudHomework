@@ -1,11 +1,12 @@
 package ru.gb.issue_service;
 
+import ru.gb.issue_service.provider.BookProvider;
+import ru.gb.issue_service.provider.ReaderProvider;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.gb.issue_service.provider.BookProvider;
-import ru.gb.issue_service.provider.ReaderProvider;
+import ru.gb.timer.TimerCustomAnnotation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +34,7 @@ public class IssueController {
     }
 
     @GetMapping("refresh")
+    @TimerCustomAnnotation
     public List<Issue> refresh(){
         generateIssue();
         return list;

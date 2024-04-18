@@ -1,8 +1,8 @@
 package ru.gb.issue_service;
 
-import lombok.Data;
 import ru.gb.issue_service.dto.Book;
 import ru.gb.issue_service.dto.Reader;
+import lombok.Data;
 
 import java.util.UUID;
 
